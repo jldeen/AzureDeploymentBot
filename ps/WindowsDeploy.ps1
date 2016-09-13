@@ -25,11 +25,6 @@ Write-Output "The Location you're putting your VM in is $Location."
 Write-Output "The name of your resource group is $Resource."
 Write-Output "The name of your deployment is $Name."
 
-
-<# $Location="WestUs"
-$RGName="TestDeploy3"
-$DepName="TestDeploy3" #>
-
 $TempFile="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json"
 
 New-AzureRmResourceGroup $Resource $Location
