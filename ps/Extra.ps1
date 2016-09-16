@@ -3,7 +3,7 @@
 #Get list of all resource groups, location, and provisioning state
 
 Get-AzureRmResourceGroup | Select-Object ResourceGroupName, Location, ProvisioningState
-
+ 
 Get-AzureRMVM | select-object Name, ResourceGroupName
    
 #Virtual Machine Status in ARM
