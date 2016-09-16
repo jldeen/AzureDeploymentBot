@@ -29,13 +29,6 @@ foreach($RG in $RGs)
     }
 }
 
-$out = new-object psobject
-$out | add-member noteproperty 'Virtual Machine' $VM.Name
-$out | add-member noteproperty Status $VMStatusDetail
-$out | add-member noteproperty 'Resource Group' $RG.ResourceGroupName
-write-output $out
-
-
 Get-AzureRmVM | Select-Object
  
 AvailabilitySetReference 
