@@ -21,11 +21,13 @@ foreach($RG in $RGs)
                 $VMStatusDetail = $VMStatus.DisplayStatus
             }
         }
+        #region
         $out = new-object psobject
         $out | add-member noteproperty 'Virtual Machine Name' $VM.Name
         $out | add-member noteproperty Status $VMStatusDetail
         $out | add-member noteproperty 'Resource Group Name' $RG.ResourceGroupName
         Write-Output $out
+        #endregion
     }
 }
 
